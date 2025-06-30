@@ -46,7 +46,7 @@ bool is_prime(int num)
     return true;
 }
 
-void fill_prime_numbers(int amount_numbers, int* array_to_fill)
+void fill_prime_numbers(int amount_numbers, std::array<int, ARRAY_LEN>& array_to_fill)
 {
     int counter_index = 0;
     int counter_loop = INITIAL_PRIME;
