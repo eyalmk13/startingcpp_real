@@ -1,11 +1,13 @@
 #include <iomanip> // for std::setw
 #include <iostream>
 
+
+constexpr int WIDTH = 10;
+constexpr int HEIGHT = 10;
+
+
 int main()
 {
-    int WIDTH = 10;
-    int HEIGHT = 10;
-
     for (int i = 0; i <= HEIGHT; i++)
     {
         for (int j = 0; j <= WIDTH; j++)
