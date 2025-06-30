@@ -6,9 +6,7 @@ int main()
 {
     double input_num = 0;
     double sqrt_number = 0;
-    bool result_input_type = true; 
-    result_input_type = std::cin >> input_num;
-    if (!result_input_type)
+    if (!(std::cin >> input_num))
     {
         std::cout << "input is needs to be of double type" << std::endl;
         return 1;     
