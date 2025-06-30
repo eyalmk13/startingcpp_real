@@ -5,20 +5,24 @@
 #define ERROR_INPUT (-1)
 #define FIRST_PRIMARY_NUM (2)
 #define INITIAL_PRIME (2)
-#define ARRAY_LEN (100)
 
 /*
-manages input recieving from the user and checking the input
+manages input recieving of the length and checking is good for use. 
 :param array_len: the length of the array to put in the prime numbers
-:return: if the number can be a prime (in range and in type) - unsigned number, else -1.
+:return: if the number can be a length of array (in range and in type) - unsigned number, else -1.
 */
-int input_manage(int array_len);
-
+int get_length_fill(int array_len);
+/*
+checking if the number is prime
+:param num: the number to check
+:return: if the number is prime - true,else false
+*/
+bool is_prime(int num);
 /*
 Fills the provided array with the first `amount_numbers` prime numbers.
 :param amount_numbers:the amount of prime numbers to generate and put in array
 :param array_to_fill:the arrray to fill.
 :return: None
 */
-void fill_prime_numbers(int amount_numbers, std::array<int, ARRAY_LEN>& array_to_fill);
+void fill_prime_numbers(int amount_numbers, int * array_to_fill);
 #endif

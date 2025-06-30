@@ -6,8 +6,9 @@
 int main()
 {
     int input_num = 0;
-    std::array<int, ARRAY_LEN> array_numbers {};
-    input_num = input_manage(ARRAY_LEN);
+    const size_t ARRAY_LEN = 100; 
+    int* array_numbers = new int[ARRAY_LEN];
+    input_num = get_length_fill(ARRAY_LEN);
     if (input_num == ERROR_INPUT)
     {
         return 1;
@@ -19,5 +20,6 @@ int main()
     {
         std::cout << array_numbers[i] << std::endl;
     }
+    delete[] array_numbers;
     return 0;
 }
