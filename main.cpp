@@ -1,10 +1,18 @@
 #include <cmath>
 #include <iostream>
+
+
 int main()
 {
-    float input_num = 0;
-    float sqrt_number = 0;
-    std::cin >> input_num;
+    double input_num = 0;
+    double sqrt_number = 0;
+    bool result_input_type = true; 
+    result_input_type = std::cin >> input_num;
+    if (!result_input_type)
+    {
+        std::cout << "input is needs to be of double type" << std::endl;
+        return 1;     
+    }
     if (input_num < 0)
     {
         std::cout << "input is negative can't do square root" << std::endl;
