@@ -1,24 +1,34 @@
-#include <cmath>
+#include <iomanip> // for std::setw
 #include <iostream>
-
 
 int main()
 {
-    double input_num = 0;
-    double sqrt_number = 0;
-    bool result_input_type = true; 
-    result_input_type = std::cin >> input_num;
-    if (!result_input_type)
+    int WIDTH = 10;
+    int HEIGHT = 10;
+
+    for (int i = 0; i <= HEIGHT; i++)
     {
-        std::cout << "input is needs to be of double type" << std::endl;
-        return 1;     
+        for (int j = 0; j <= WIDTH; j++)
+        {
+            if (i == 0 && j == 0)
+            {
+                std::cout << std::setw(4) << " ";
+            }
+            else if (i == 0)
+            {
+                std::cout << std::setw(4) << j;
+            }
+            else if (j == 0)
+            {
+                std::cout << std::setw(4) << i;
+            }
+            else
+            {
+                std::cout << std::setw(4) << i * j;
+            }
+        }
+        std::cout << std::endl;
     }
-    if (input_num < 0)
-    {
-        std::cout << "input is negative can't do square root" << std::endl;
-        return 1;
-    }
-    sqrt_number = sqrt(input_num);
-    std::cout << sqrt_number << std::endl;
+
     return 0;
 }
