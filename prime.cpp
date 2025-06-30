@@ -23,7 +23,7 @@ bool is_prime(int num)
 {
     int sqrt_number = 0;
     sqrt_number = static_cast<int>(sqrt(num));
-    for (int i = 2; i <= sqrt_number; i++)
+    for (int i = FIRST_PRIMARY_NUM; i <= sqrt_number; i++)
     {
         if (num % i == 0)
         {
